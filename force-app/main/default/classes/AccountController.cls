@@ -2,7 +2,7 @@ public with sharing class AccountController {
     public List<Account> acc = new List<Account>();
   @AuraEnabled(cacheable=true)
   public static List<Account> getAllActiveAccounts() {
-    return [SELECT Id,Name,Phone,Type, Active__c FROM Account]; // Adding a comment
+    return [SELECT Id,Name,Phone,Type, Active__c FROM Account]; // Adding a comment to test GitLab & GitHub Integration.
   }
     @AuraEnabled
     public static string updateAccounts(object data){
